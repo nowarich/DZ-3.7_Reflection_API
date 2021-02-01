@@ -77,7 +77,7 @@ public class TestStarter {
         try {
             start(Class.forName(className));
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("SWW", e);
+            throw new RuntimeException("Something went wrong", e);
         }
     }
 
@@ -85,7 +85,7 @@ public class TestStarter {
         try {
             return aClass.getDeclaredConstructor().newInstance();
         } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
-            throw new RuntimeException("SWW", e);
+            throw new RuntimeException("Something went wrong", e);
         }
     }
 }
